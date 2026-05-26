@@ -1,4 +1,5 @@
-import React, { useState, useEffect } from 'react';
+/* eslint-disable react-hooks/set-state-in-effect */
+import { useState, useEffect } from 'react';
 import './App.css';
 
 const STORAGE_KEY = 'mirage_homepage_onboarding_v5';

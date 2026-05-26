@@ -227,21 +227,21 @@ export default function App() {
       {/* Foreground Content Wrapper */}
       <div className="relative h-full w-full z-10 pointer-events-none">
         
-        {/* Three giant staggered headline words */}
-        <h1 className="hero-title absolute text-white font-medium text-[14vw] md:text-[13vw] left-4 md:left-10 top-[18%] lowercase select-none">
+        {/* Three giant staggered headlines - Styled in lighter font and smaller, elegant scale */}
+        <h1 className="hero-title absolute text-white font-light text-[8vw] md:text-[7vw] left-6 md:left-12 top-[20%] tracking-tight lowercase select-none">
           protect
         </h1>
         
-        <h1 className="hero-title absolute text-white font-medium text-[14vw] md:text-[13vw] right-4 md:right-[500px] top-[38%] lowercase select-none">
+        <h1 className="hero-title absolute text-white font-light text-[8vw] md:text-[7vw] right-6 md:right-[520px] top-[38%] tracking-tight lowercase select-none">
           your
         </h1>
         
-        <h1 className="hero-title absolute text-white font-medium text-[14vw] md:text-[13vw] left-[18%] md:left-[28%] top-[58%] lowercase select-none">
+        <h1 className="hero-title absolute text-white font-light text-[8vw] md:text-[7vw] left-[18%] md:left-[30%] top-[56%] tracking-tight lowercase select-none">
           data
         </h1>
 
         {/* Description paragraph */}
-        <p className="absolute left-6 md:left-10 top-[46%] max-w-[240px] text-[15px] leading-snug text-white/90 pointer-events-auto lowercase">
+        <p className="absolute left-6 md:left-12 top-[46%] max-w-[240px] text-[15px] leading-snug text-white/90 pointer-events-auto lowercase font-light">
           we can guarding your data with utmost care, empowering you with privacy everywhere
         </p>
 
@@ -249,9 +249,9 @@ export default function App() {
         <div className="absolute right-6 md:right-24 top-[13%] flex flex-col items-end">
           <div className="flex items-center gap-3 justify-end">
             <div className="hidden md:block h-px w-24 bg-white/40 rotate-[20deg]" />
-            <span className="text-4xl md:text-5xl font-medium tracking-tight text-white">+65k</span>
+            <span className="text-4xl md:text-5xl font-light tracking-tight text-white">+65k</span>
           </div>
-          <span className="text-xs md:text-sm text-white/70 mt-1 text-right lowercase">
+          <span className="text-xs md:text-sm text-white/70 mt-1 text-right lowercase font-light">
             startups use
           </span>
         </div>
@@ -259,10 +259,10 @@ export default function App() {
         {/* Stat block - bottom-left */}
         <div className="absolute left-6 md:left-20 bottom-20 md:bottom-24 flex flex-col items-start">
           <div className="flex items-center gap-3 justify-start">
-            <span className="text-4xl md:text-5xl font-medium tracking-tight text-white">+1.5b</span>
+            <span className="text-4xl md:text-5xl font-light tracking-tight text-white">+1.5b</span>
             <div className="hidden md:block h-px w-24 bg-white/40 rotate-[-20deg]" />
           </div>
-          <span className="text-xs md:text-sm text-white/70 mt-1 lowercase">
+          <span className="text-xs md:text-sm text-white/70 mt-1 lowercase font-light">
             gb data was protected
           </span>
         </div>
@@ -271,9 +271,9 @@ export default function App() {
         <div className="absolute right-6 md:right-20 bottom-12 md:bottom-16 flex flex-col items-end">
           <div className="flex items-center gap-3 justify-end">
             <div className="hidden md:block h-px w-24 bg-white/40 rotate-[-20deg]" />
-            <span className="text-4xl md:text-5xl font-medium tracking-tight text-white">+300k</span>
+            <span className="text-4xl md:text-5xl font-light tracking-tight text-white">+300k</span>
           </div>
-          <span className="text-xs md:text-sm text-white/70 mt-1 text-right lowercase">
+          <span className="text-xs md:text-sm text-white/70 mt-1 text-right lowercase font-light">
             downloads
           </span>
         </div>
@@ -283,7 +283,7 @@ export default function App() {
           
           {/* Header */}
           <div className="mb-4">
-            <h2 className="text-sm font-semibold tracking-wider text-white uppercase">mirage integration console</h2>
+            <h2 className="text-sm font-medium tracking-wider text-white uppercase">mirage integration console</h2>
             <p className="text-xs text-neutral-400 mt-0.5 lowercase font-mono">secure operator profile credentials</p>
           </div>
 
