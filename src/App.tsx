@@ -108,63 +108,12 @@ export default function App() {
         </nav>
       </header>
 
-      {/* Foreground Content Wrapper */}
-      <div className="relative h-full w-full z-10 pointer-events-none">
+      {/* Foreground Content Wrapper (Centered Form Layout) */}
+      <div className="relative h-full w-full z-10 pointer-events-none flex items-center justify-center">
         
-        {/* Three giant staggered headline words */}
-        <h1 className="hero-title absolute text-white font-medium text-[14vw] md:text-[13vw] left-4 md:left-10 top-[18%] lowercase select-none">
-          protect
-        </h1>
-        
-        <h1 className="hero-title absolute text-white font-medium text-[14vw] md:text-[13vw] right-4 md:right-10 top-[38%] lowercase select-none">
-          your
-        </h1>
-        
-        <h1 className="hero-title absolute text-white font-medium text-[14vw] md:text-[13vw] left-[18%] md:left-[28%] top-[58%] lowercase select-none">
-          data
-        </h1>
-
-        {/* Description paragraph */}
-        <p className="absolute left-6 md:left-10 top-[46%] max-w-[240px] text-[15px] leading-snug text-white/90 font-sans pointer-events-auto lowercase">
-          we can guarding your data with utmost care, empowering you with privacy everywhere
-        </p>
-
-        {/* Stat block - top-right */}
-        <div className="absolute right-6 md:right-24 top-[14%] flex flex-col items-end">
-          <div className="flex items-center gap-3 justify-end">
-            <div className="hidden md:block h-px w-24 bg-white/40 rotate-[20deg]" />
-            <span className="text-4xl md:text-5xl font-medium tracking-tight text-white font-sans">+65k</span>
-          </div>
-          <span className="text-xs md:text-sm text-white/70 mt-1 text-right font-sans lowercase">
-            startups use
-          </span>
-        </div>
-
-        {/* Stat block - bottom-left */}
-        <div className="absolute left-6 md:left-20 bottom-20 md:bottom-24 flex flex-col items-start">
-          <div className="flex items-center gap-3 justify-start">
-            <span className="text-4xl md:text-5xl font-medium tracking-tight text-white font-sans">+1.5b</span>
-            <div className="hidden md:block h-px w-24 bg-white/40 rotate-[-20deg]" />
-          </div>
-          <span className="text-xs md:text-sm text-white/70 mt-1 font-sans lowercase">
-            gb data was protected
-          </span>
-        </div>
-
-        {/* Stat block - bottom-right */}
-        <div className="absolute right-6 md:right-20 bottom-16 md:bottom-20 flex flex-col items-end">
-          <div className="flex items-center gap-3 justify-end">
-            <div className="hidden md:block h-px w-24 bg-white/40 rotate-[-20deg]" />
-            <span className="text-4xl md:text-5xl font-medium tracking-tight text-white font-sans">+300k</span>
-          </div>
-          <span className="text-xs md:text-sm text-white/70 mt-1 text-right font-sans lowercase">
-            downloads
-          </span>
-        </div>
-
-        {/* Interactive White-Font Integration Form (Right Side) */}
-        <div className="absolute right-6 md:right-16 top-[24%] md:top-[26%] w-[calc(100%-3rem)] md:w-[420px] bg-neutral-950/85 border border-neutral-800 backdrop-blur-md rounded-2xl p-6 text-white font-sans flex flex-col pointer-events-auto shadow-2xl z-30">
-          <div className="mb-4">
+        {/* Interactive White-Font Integration Form (Centered) */}
+        <div className="w-[calc(100%-3rem)] max-w-[420px] bg-neutral-950/85 border border-neutral-800 backdrop-blur-md rounded-2xl p-6 text-white font-sans flex flex-col pointer-events-auto shadow-2xl z-30">
+          <div className="mb-5">
             <h2 className="text-xs font-mono tracking-widest text-neutral-400 uppercase">system config panel</h2>
             <p className="text-xs text-neutral-500 mt-0.5 lowercase font-mono">sync live workspace preferences</p>
           </div>
