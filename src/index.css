@@ -1,3 +1,28 @@
+@import "tailwindcss";
+
+/* ==========================================================================
+   SECURIFY // SYSTEM THEME SCOPING
+   ========================================================================== */
+html.securify-active, body.securify-active, body.securify-active #root {
+  height: 100% !important;
+}
+
+body.securify-active {
+  background-color: #000000 !important;
+  color: #ffffff !important;
+  font-family: 'Readex Pro', system-ui, -apple-system, sans-serif !important;
+  min-height: 100% !important;
+  margin: 0;
+  padding: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.securify-active .hero-title {
+  letter-spacing: -0.04em;
+  line-height: 0.95;
+}
+
 /* ==========================================================================
    MIRAGE // ULTRA-PREMIUM PURE WHITE & BLACK MINIMALIST SYSTEM
    ========================================================================== */
