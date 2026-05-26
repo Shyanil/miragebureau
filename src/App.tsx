@@ -186,12 +186,11 @@ export default function App() {
         src="https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/hf_20260418_063509_7d167302-4fd4-480b-8260-18ab572333d4.mp4"
       />
 
-      {/* Navbar / Header */}
+      {/* Navbar / Header - Minimalist Brand Element Only */}
       <header className="absolute z-20 px-6 md:px-10 pt-6 top-0 left-0 right-0">
         <nav className="flex items-center justify-between gap-4">
-          
           {/* Left brand pill: Dolby VP Logo + Dot (No Text) */}
-          <div className="flex items-center gap-1.5 bg-neutral-900/90 backdrop-blur rounded-full px-4 py-3">
+          <div className="flex items-center gap-1.5 bg-neutral-900/90 backdrop-blur rounded-full px-4 py-3 animate-fade-in">
             <svg
               viewBox="0 0 256 256"
               className="h-5 w-5 fill-white"
@@ -200,86 +199,14 @@ export default function App() {
             </svg>
             <span className="text-white text-sm font-extrabold leading-none">.</span>
           </div>
-
-          {/* Center pill (hidden on mobile) */}
-          <div className="hidden md:flex items-center gap-1 bg-neutral-900/90 backdrop-blur rounded-full px-3 py-2">
-            <a href="#platform" className="text-neutral-300 hover:text-white transition-colors text-sm px-5 py-2 rounded-full">
-              platform
-            </a>
-            <a href="#solutions" className="text-neutral-300 hover:text-white transition-colors text-sm px-5 py-2 rounded-full">
-              solutions
-            </a>
-            <a href="#company" className="text-neutral-300 hover:text-white transition-colors text-sm px-5 py-2 rounded-full">
-              company
-            </a>
-            <a href="#support" className="text-neutral-300 hover:text-white transition-colors text-sm px-5 py-2 rounded-full">
-              support
-            </a>
-          </div>
-
-          {/* Right button */}
-          <button className="bg-white text-black text-sm font-normal rounded-full px-6 py-3 hover:bg-neutral-200 transition-colors cursor-pointer">
-            get started
-          </button>
         </nav>
       </header>
 
-      {/* Foreground Content Wrapper */}
-      <div className="relative h-full w-full z-10 pointer-events-none">
+      {/* Foreground Content Wrapper - Only the Centered Form Card */}
+      <div className="relative h-full w-full z-10 pointer-events-none flex items-center justify-center">
         
-        {/* Three giant staggered headlines - Styled in lighter font and smaller, elegant scale */}
-        <h1 className="hero-title absolute text-white font-light text-[8vw] md:text-[7vw] left-6 md:left-12 top-[20%] tracking-tight lowercase select-none">
-          protect
-        </h1>
-        
-        <h1 className="hero-title absolute text-white font-light text-[8vw] md:text-[7vw] right-6 md:right-[520px] top-[38%] tracking-tight lowercase select-none">
-          your
-        </h1>
-        
-        <h1 className="hero-title absolute text-white font-light text-[8vw] md:text-[7vw] left-[18%] md:left-[30%] top-[56%] tracking-tight lowercase select-none">
-          data
-        </h1>
-
-        {/* Description paragraph */}
-        <p className="absolute left-6 md:left-12 top-[46%] max-w-[240px] text-[15px] leading-snug text-white/90 pointer-events-auto lowercase font-light">
-          we can guarding your data with utmost care, empowering you with privacy everywhere
-        </p>
-
-        {/* Stat block - top-right (Sitting perfectly above the wizard card) */}
-        <div className="absolute right-6 md:right-24 top-[13%] flex flex-col items-end">
-          <div className="flex items-center gap-3 justify-end">
-            <div className="hidden md:block h-px w-24 bg-white/40 rotate-[20deg]" />
-            <span className="text-4xl md:text-5xl font-light tracking-tight text-white">+65k</span>
-          </div>
-          <span className="text-xs md:text-sm text-white/70 mt-1 text-right lowercase font-light">
-            startups use
-          </span>
-        </div>
-
-        {/* Stat block - bottom-left */}
-        <div className="absolute left-6 md:left-20 bottom-20 md:bottom-24 flex flex-col items-start">
-          <div className="flex items-center gap-3 justify-start">
-            <span className="text-4xl md:text-5xl font-light tracking-tight text-white">+1.5b</span>
-            <div className="hidden md:block h-px w-24 bg-white/40 rotate-[-20deg]" />
-          </div>
-          <span className="text-xs md:text-sm text-white/70 mt-1 lowercase font-light">
-            gb data was protected
-          </span>
-        </div>
-
-        {/* Stat block - bottom-right */}
-        <div className="absolute right-6 md:right-20 bottom-12 md:bottom-16 flex flex-col items-end">
-          <div className="flex items-center gap-3 justify-end">
-            <div className="hidden md:block h-px w-24 bg-white/40 rotate-[-20deg]" />
-            <span className="text-4xl md:text-5xl font-light tracking-tight text-white">+300k</span>
-          </div>
-          <span className="text-xs md:text-sm text-white/70 mt-1 text-right lowercase font-light">
-            downloads
-          </span>
-        </div>
-
-        {/* Embedded 4-stage Mirage Integration Wizard (Right Side) */}
-        <div className="absolute right-6 md:right-16 top-[21%] md:top-[22%] w-[calc(100%-3rem)] md:w-[450px] bg-neutral-950/85 border border-neutral-800 backdrop-blur-md rounded-2xl p-6 text-white flex flex-col pointer-events-auto shadow-2xl z-30">
+        {/* Embedded 4-stage Mirage Integration Wizard (Centered) */}
+        <div className="w-[calc(100%-3rem)] max-w-[450px] bg-neutral-950/85 border border-neutral-800 backdrop-blur-md rounded-2xl p-6 text-white flex flex-col pointer-events-auto shadow-2xl z-30 animate-fade-in">
           
           {/* Header */}
           <div className="mb-4">
