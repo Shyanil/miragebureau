@@ -3,23 +3,25 @@ import './App.css';
 
 const STORAGE_KEY = 'mirage_homepage_onboarding_v5';
 
+const INITIAL_STATE = {
+  clientName: '',
+  companyName: '',
+  email: '',
+  website: '',
+  projectType: '',
+  budget: '150000',
+  timeline: '',
+  autonomyLevel: 'read',
+  plugins: ['sec-shield'],
+  termsAccepted: false
+};
+
 export default function App() {
   const [isStarted, setIsStarted] = useState(false);
   const [currentStep, setCurrentStep] = useState(1);
   const [dialogOpen, setDialogOpen] = useState(false);
   
-  const [formData, setFormData] = useState({
-    clientName: '',
-    companyName: '',
-    email: '',
-    website: '',
-    projectType: '',
-    budget: '150000',
-    timeline: '',
-    autonomyLevel: 'read',
-    plugins: ['sec-shield'],
-    termsAccepted: false
-  });
+  const [formData, setFormData] = useState(INITIAL_STATE);
 
   const [dirtyFields, setDirtyFields] = useState({});
   const [isMobile, setIsMobile] = useState(false);
@@ -40,7 +42,14 @@ export default function App() {
     if (stored) {
       try {
         const state = JSON.parse(stored);
-        setFormData(state.formData || {});
+        if (state.formData && typeof state.formData === 'object') {
+          setFormData({
+            ...INITIAL_STATE,
+            ...state.formData,
+            // Guard against legacy caches where plugins is missing or not an array
+            plugins: Array.isArray(state.formData.plugins) ? state.formData.plugins : INITIAL_STATE.plugins
+          });
+        }
         setCurrentStep(state.currentStep || 1);
         setIsStarted(state.isStarted || false);
       } catch (e) {
@@ -48,6 +57,7 @@ export default function App() {
       }
     }
   }, []);
+
 
   const handleFormChange = (fields) => {
     const updated = { ...formData, ...fields };
