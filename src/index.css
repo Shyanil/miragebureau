@@ -5,15 +5,20 @@
    ========================================================================== */
 html.securify-active, body.securify-active, body.securify-active #root {
   height: 100% !important;
+  width: 100% !important;
 }
 
 body.securify-active {
+  display: block !important;
   background-color: #000000 !important;
+  background-image: none !important;
   color: #ffffff !important;
   font-family: 'Readex Pro', system-ui, -apple-system, sans-serif !important;
   min-height: 100% !important;
+  height: 100% !important;
   margin: 0;
   padding: 0;
+  overflow: hidden !important;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
