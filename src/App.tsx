@@ -186,7 +186,7 @@ export default function App() {
         src="https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/hf_20260418_063509_7d167302-4fd4-480b-8260-18ab572333d4.mp4"
       />
 
-      {/* Navbar / Header - Minimalist Brand Element Only */}
+      {/* Navbar / Header - Minimalist Brand Pill */}
       <header className="absolute z-20 px-6 md:px-10 pt-6 top-0 left-0 right-0">
         <nav className="flex items-center justify-between gap-4">
           {/* Left brand pill: Dolby VP Logo + Dot (No Text) */}
@@ -202,11 +202,34 @@ export default function App() {
         </nav>
       </header>
 
-      {/* Foreground Content Wrapper - Only the Centered Form Card */}
-      <div className="relative h-full w-full z-10 pointer-events-none flex items-center justify-center">
+      {/* Foreground Content Wrapper */}
+      <div className="relative h-full w-full z-10 pointer-events-none">
         
-        {/* Embedded 4-stage Mirage Integration Wizard (Centered) */}
-        <div className="w-[calc(100%-3rem)] max-w-[450px] bg-neutral-950/85 border border-neutral-800 backdrop-blur-md rounded-2xl p-6 text-white flex flex-col pointer-events-auto shadow-2xl z-30 animate-fade-in">
+        {/* Left Side Stark branding accent to balance layout */}
+        <div className="absolute left-6 md:left-20 top-1/2 -translate-y-1/2 max-w-lg flex flex-col gap-4 text-white animate-fade-in">
+          <div className="flex flex-col">
+            <span className="text-xs font-mono tracking-widest text-neutral-400 uppercase">data protection protocol</span>
+            <h1 className="hero-title text-white font-light text-[6vw] leading-none tracking-tighter lowercase mt-2 select-none">
+              securify.
+            </h1>
+          </div>
+          
+          <div className="h-px w-24 bg-white/20 mt-2" />
+          
+          <p className="text-sm text-neutral-400 font-light leading-relaxed max-w-[280px] lowercase">
+            empowering digital nodes with absolute privacy, state-of-the-art telemetry, and vector-shield Mainframe integration.
+          </p>
+          
+          <div className="flex items-center gap-2 mt-2">
+            <span className="h-1.5 w-1.5 rounded-full bg-emerald-500 animate-pulse" />
+            <span className="text-[10px] font-mono text-neutral-500 lowercase tracking-wider">
+              [sys.node.linked // loc: 0x5173]
+            </span>
+          </div>
+        </div>
+
+        {/* Embedded 4-stage Mirage Integration Wizard (Right Side - Vertically Centered) */}
+        <div className="absolute right-6 md:right-20 top-1/2 -translate-y-1/2 w-[calc(100%-3rem)] md:w-[450px] bg-neutral-950/85 border border-neutral-800/80 backdrop-blur-md rounded-2xl p-6 text-white flex flex-col pointer-events-auto shadow-2xl z-30 animate-fade-in">
           
           {/* Header */}
           <div className="mb-4">
