@@ -357,6 +357,14 @@ function FormCard({ step, setStep, form, set, submitted, setSubmitted, mobile }:
           <p style={{ margin: 0, color: 'rgba(255,255,255,0.38)', fontSize: 13, fontWeight: 300, lineHeight: 1.65 }}>
             We'll reach out to <span style={{ color: 'rgba(255,255,255,0.72)' }}>{form.email}</span> within one business day.
           </p>
+          <div style={{ marginTop: 6, paddingTop: 12, borderTop: '1px solid rgba(255,255,255,0.06)' }}>
+            <span style={{ display: 'block', fontSize: 10, letterSpacing: '0.12em', textTransform: 'uppercase', color: 'rgba(255,255,255,0.36)', fontWeight: 300 }}>
+              This email will reach you
+            </span>
+            <a href="mailto:contact@miragebureau.world" style={{ display: 'inline-block', marginTop: 4, color: '#fff', fontSize: 13, fontWeight: 400, textDecoration: 'none', borderBottom: '1px solid rgba(255,255,255,0.2)', transition: 'opacity 0.2s' }}>
+              contact@miragebureau.world
+            </a>
+          </div>
         </div>
       )}
     </div>
