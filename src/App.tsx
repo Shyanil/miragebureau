@@ -110,21 +110,32 @@ function DesktopLayout({ step, setStep, form, set, submitted, setSubmitted }: La
           gap: 28, minWidth: 0, textAlign: 'left',
         }}>
 
-          {/* ── LOGO — centered, large, hero focal point ── */}
-          <img
-            src="/logo.webp"
-            alt="Mirage Bureau"
-            style={{
-              display: 'block',
-              width: 'clamp(200px, 24vw, 340px)',
-              height: 'auto',
-              maxHeight: 140,
-              objectFit: 'contain',
-              objectPosition: 'left center',
-              opacity: 1,
-              filter: 'drop-shadow(0 0 60px rgba(255,255,255,0.16)) drop-shadow(0 0 20px rgba(255,255,255,0.08))',
-            }}
-          />
+          {/* ── LOGO — in frosted glass pill so always visible ── */}
+          <div style={{
+            display: 'inline-flex',
+            alignItems: 'center',
+            justifyContent: 'flex-start',
+            padding: '18px 28px',
+            borderRadius: 16,
+            background: 'rgba(255,255,255,0.07)',
+            backdropFilter: 'blur(20px)',
+            WebkitBackdropFilter: 'blur(20px)',
+            border: '1px solid rgba(255,255,255,0.12)',
+            boxShadow: '0 8px 32px rgba(0,0,0,0.4), inset 0 1px 0 rgba(255,255,255,0.08)',
+          }}>
+            <img
+              src="/logo.webp"
+              alt="Mirage Bureau"
+              style={{
+                display: 'block',
+                width: 'clamp(160px, 20vw, 280px)',
+                height: 'auto',
+                maxHeight: 80,
+                objectFit: 'contain',
+                objectPosition: 'left center',
+              }}
+            />
+          </div>
 
           {/* Thin divider under logo */}
           <div style={{
