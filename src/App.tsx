@@ -106,8 +106,8 @@ function DesktopLayout({ step, setStep, form, set, submitted, setSubmitted }: La
         {/* LEFT — centered logo + editorial copy */}
         <div style={{
           flex: 1, display: 'flex', flexDirection: 'column',
-          alignItems: 'center', justifyContent: 'center',
-          gap: 28, minWidth: 0, textAlign: 'center',
+          alignItems: 'flex-start', justifyContent: 'center',
+          gap: 28, minWidth: 0, textAlign: 'left',
         }}>
 
           {/* ── LOGO — centered, large, hero focal point ── */}
@@ -120,7 +120,7 @@ function DesktopLayout({ step, setStep, form, set, submitted, setSubmitted }: La
               height: 'auto',
               maxHeight: 140,
               objectFit: 'contain',
-              objectPosition: 'center',
+              objectPosition: 'left center',
               opacity: 1,
               filter: 'drop-shadow(0 0 60px rgba(255,255,255,0.16)) drop-shadow(0 0 20px rgba(255,255,255,0.08))',
             }}
@@ -129,7 +129,7 @@ function DesktopLayout({ step, setStep, form, set, submitted, setSubmitted }: La
           {/* Thin divider under logo */}
           <div style={{
             width: 56, height: 1,
-            background: 'linear-gradient(to right, transparent, rgba(255,255,255,0.3), transparent)',
+            background: 'linear-gradient(to right, rgba(255,255,255,0.3), transparent)',
           }} />
 
           <h1 style={{
