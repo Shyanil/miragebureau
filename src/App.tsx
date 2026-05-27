@@ -110,38 +110,20 @@ function DesktopLayout({ step, setStep, form, set, submitted, setSubmitted }: La
           gap: 28, minWidth: 0, textAlign: 'left',
         }}>
 
-          {/* ── LOGO — in frosted glass pill so always visible ── */}
+          {/* Elegant minimalist prefix tag */}
           <div style={{
-            display: 'inline-flex',
+            fontSize: 10,
+            letterSpacing: '0.28em',
+            textTransform: 'uppercase',
+            color: 'rgba(255,255,255,0.45)',
+            fontWeight: 400,
+            display: 'flex',
             alignItems: 'center',
-            justifyContent: 'flex-start',
-            padding: '18px 28px',
-            borderRadius: 16,
-            background: 'rgba(255,255,255,0.07)',
-            backdropFilter: 'blur(20px)',
-            WebkitBackdropFilter: 'blur(20px)',
-            border: '1px solid rgba(255,255,255,0.12)',
-            boxShadow: '0 8px 32px rgba(0,0,0,0.4), inset 0 1px 0 rgba(255,255,255,0.08)',
+            gap: 12
           }}>
-            <img
-              src="/logo.webp"
-              alt="Mirage Bureau"
-              style={{
-                display: 'block',
-                width: 'clamp(160px, 20vw, 280px)',
-                height: 'auto',
-                maxHeight: 80,
-                objectFit: 'contain',
-                objectPosition: 'left center',
-              }}
-            />
+            <span>Creative Studio</span>
+            <div style={{ width: 24, height: 1, background: 'rgba(255,255,255,0.3)' }} />
           </div>
-
-          {/* Thin divider under logo */}
-          <div style={{
-            width: 56, height: 1,
-            background: 'linear-gradient(to right, rgba(255,255,255,0.3), transparent)',
-          }} />
 
           <h1 style={{
             margin: 0,
@@ -264,7 +246,14 @@ function FormCard({ step, setStep, form, set, submitted, setSubmitted, mobile }:
           <img
             src="/logo.webp"
             alt="Mirage Bureau"
-            style={{ height: 20, objectFit: 'contain', display: 'block', marginBottom: 8, opacity: 0.88 }}
+            style={{
+              height: mobile ? 20 : 25,
+              objectFit: 'contain',
+              display: 'block',
+              marginBottom: 10,
+              opacity: 0.95,
+              filter: 'drop-shadow(0 2px 10px rgba(0,0,0,0.3))',
+            }}
           />
           <h2 style={{
             margin: 0, color: '#fff', fontWeight: 300,
