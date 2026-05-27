@@ -164,14 +164,17 @@ export default function App() {
 
             {/* Card header bar */}
             <div style={{
-              padding: '22px 28px 18px',
+              padding: '20px 28px 18px',
               borderBottom: '1px solid rgba(255,255,255,0.06)',
               display: 'flex', alignItems: 'flex-start', justifyContent: 'space-between',
             }}>
               <div>
-                <p style={{ margin: 0, fontSize: 10, letterSpacing: '0.22em', textTransform: 'uppercase', color: 'rgba(255,255,255,0.35)', fontWeight: 300, marginBottom: 6 }}>
-                  Client Brief
-                </p>
+                {/* Logo inside form card */}
+                <img
+                  src="/logo.webp"
+                  alt="Higgsfield"
+                  style={{ height: 22, width: 'auto', objectFit: 'contain', marginBottom: 10, display: 'block', opacity: 0.92 }}
+                />
                 <h2 style={{
                   margin: 0, color: '#fff', fontWeight: 300,
                   fontFamily: "'Cormorant Garamond', serif",
