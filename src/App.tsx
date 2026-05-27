@@ -84,69 +84,76 @@ interface LayoutProps {
 }
 
 /* ─────────────────────────────────────────────
-   Desktop Layout  (side-by-side)
+   Desktop Layout  (centered logo + right form)
 ───────────────────────────────────────────── */
 function DesktopLayout({ step, setStep, form, set, submitted, setSubmitted }: LayoutProps) {
   return (
     <div style={{ position: 'absolute', inset: 0, zIndex: 10, display: 'flex', flexDirection: 'column' }}>
 
-      {/* Header */}
+      {/* Minimal header — label only, no duplicate logo */}
       <header style={{
         padding: '32px 52px 0',
-        display: 'flex', alignItems: 'center', justifyContent: 'space-between', flexShrink: 0,
+        display: 'flex', alignItems: 'center', justifyContent: 'flex-end', flexShrink: 0,
       }}>
-        <img src="/logo.webp" alt="Mirage Bureau" style={{ height: 36, width: 'auto', display: 'block', objectFit: 'contain' }} />
-        <span style={{ fontSize: 10.5, letterSpacing: '0.24em', textTransform: 'uppercase', color: 'rgba(255,255,255,0.35)', fontWeight: 300 }}>
+        <span style={{ fontSize: 10.5, letterSpacing: '0.24em', textTransform: 'uppercase', color: 'rgba(255,255,255,0.28)', fontWeight: 300 }}>
           Creative Agency
         </span>
       </header>
 
       {/* Body row */}
-      <div style={{ flex: 1, display: 'flex', alignItems: 'center', padding: '32px 52px 52px', gap: 56, minHeight: 0 }}>
+      <div style={{ flex: 1, display: 'flex', alignItems: 'center', padding: '24px 52px 52px', gap: 48, minHeight: 0 }}>
 
-        {/* LEFT — hero copy */}
-        <div style={{ flex: 1, display: 'flex', flexDirection: 'column', gap: 32, minWidth: 0 }}>
+        {/* LEFT — centered logo + editorial copy */}
+        <div style={{
+          flex: 1, display: 'flex', flexDirection: 'column',
+          alignItems: 'center', justifyContent: 'center',
+          gap: 28, minWidth: 0, textAlign: 'center',
+        }}>
 
-          {/* Big logo as hero visual */}
+          {/* ── LOGO — centered, large, hero focal point ── */}
           <img
             src="/logo.webp"
             alt="Mirage Bureau"
             style={{
               display: 'block',
-              width: 'clamp(160px, 20vw, 280px)',
+              width: 'clamp(200px, 24vw, 340px)',
               height: 'auto',
-              maxHeight: 120,
+              maxHeight: 140,
               objectFit: 'contain',
-              objectPosition: 'left center',
-              opacity: 0.98,
-              filter: 'drop-shadow(0 0 48px rgba(255,255,255,0.12))',
+              objectPosition: 'center',
+              opacity: 1,
+              filter: 'drop-shadow(0 0 60px rgba(255,255,255,0.16)) drop-shadow(0 0 20px rgba(255,255,255,0.08))',
             }}
           />
+
+          {/* Thin divider under logo */}
+          <div style={{
+            width: 56, height: 1,
+            background: 'linear-gradient(to right, transparent, rgba(255,255,255,0.3), transparent)',
+          }} />
 
           <h1 style={{
             margin: 0,
             fontFamily: "'Cormorant Garamond', Georgia, serif",
-            fontSize: 'clamp(44px, 5.8vw, 82px)',
+            fontSize: 'clamp(38px, 5vw, 72px)',
             fontWeight: 300, fontStyle: 'italic',
-            lineHeight: 0.95, letterSpacing: '-0.03em', color: '#fff',
+            lineHeight: 0.96, letterSpacing: '-0.03em', color: '#fff',
           }}>
             We craft<br />
-            <span style={{ color: 'rgba(255,255,255,0.42)' }}>worlds that</span><br />
+            <span style={{ color: 'rgba(255,255,255,0.38)' }}>worlds that</span><br />
             move people.
           </h1>
 
           <p style={{
-            margin: 0, maxWidth: 300,
+            margin: 0, maxWidth: 280,
             fontFamily: "'Cormorant Garamond', serif",
-            fontSize: 'clamp(14px, 1.3vw, 17px)',
+            fontSize: 'clamp(13px, 1.2vw, 16px)',
             fontStyle: 'italic', fontWeight: 300,
-            color: 'rgba(255,255,255,0.4)', lineHeight: 1.7,
+            color: 'rgba(255,255,255,0.38)', lineHeight: 1.75,
           }}>
             AI-native filmmaking, brand stories &amp; generative
             visuals — for founders who refuse to look ordinary.
           </p>
-
-          <div style={{ width: 40, height: 1, background: 'linear-gradient(to right, rgba(255,255,255,0.45), transparent)' }} />
         </div>
 
         {/* RIGHT — form */}
