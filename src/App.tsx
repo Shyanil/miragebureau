@@ -95,7 +95,7 @@ function DesktopLayout({ step, setStep, form, set, submitted, setSubmitted }: La
         padding: '32px 52px 0',
         display: 'flex', alignItems: 'center', justifyContent: 'space-between', flexShrink: 0,
       }}>
-        <img src="/logo.webp" alt="Higgsfield" style={{ height: 30, objectFit: 'contain' }} />
+        <img src="/logo.webp" alt="Higgsfield" style={{ height: 36, width: 'auto', display: 'block', objectFit: 'contain' }} />
         <span style={{ fontSize: 10.5, letterSpacing: '0.24em', textTransform: 'uppercase', color: 'rgba(255,255,255,0.35)', fontWeight: 300 }}>
           AI Creative Agency
         </span>
@@ -112,10 +112,14 @@ function DesktopLayout({ step, setStep, form, set, submitted, setSubmitted }: La
             src="/logo.webp"
             alt="Higgsfield"
             style={{
-              width: 'clamp(140px, 18vw, 260px)',
+              display: 'block',
+              width: 'clamp(160px, 20vw, 280px)',
+              height: 'auto',
+              maxHeight: 120,
               objectFit: 'contain',
-              opacity: 0.97,
-              filter: 'drop-shadow(0 0 40px rgba(255,255,255,0.08))',
+              objectPosition: 'left center',
+              opacity: 0.98,
+              filter: 'drop-shadow(0 0 48px rgba(255,255,255,0.12))',
             }}
           />
 
