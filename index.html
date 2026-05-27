@@ -12,6 +12,16 @@
   </head>
   <body>
     <div id="root"></div>
+    <!-- Hidden form for Netlify form detection -->
+    <form name="brief" data-netlify="true" hidden>
+      <input type="text" name="name" />
+      <input type="text" name="company" />
+      <input type="email" name="email" />
+      <input type="text" name="projectType" />
+      <input type="text" name="budget" />
+      <input type="text" name="timeline" />
+      <textarea name="vision"></textarea>
+    </form>
     <script type="module" src="/src/main.tsx"></script>
   </body>
 </html>

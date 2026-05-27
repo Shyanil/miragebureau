@@ -1,5 +1,11 @@
 import { useState, useEffect } from 'react';
 
+const encode = (data: Record<string, string>) => {
+  return Object.keys(data)
+    .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
+    .join("&");
+};
+
 /* ─────────────────────────────────────────────
    Responsive hook
 ───────────────────────────────────────────── */
@@ -283,7 +289,16 @@ function FormCard({ step, setStep, form, set, submitted, setSubmitted, mobile }:
       {/* Form body */}
       {!submitted ? (
         <form
-          onSubmit={e => { e.preventDefault(); setSubmitted(true); }}
+          onSubmit={e => {
+            e.preventDefault();
+            fetch("/", {
+              method: "POST",
+              headers: { "Content-Type": "application/x-www-form-urlencoded" },
+              body: encode({ "form-name": "brief", ...form }),
+            })
+              .then(() => setSubmitted(true))
+              .catch(error => console.error(error));
+          }}
           style={{ padding: mobile ? '20px 22px 24px' : '22px 28px 28px', display: 'flex', flexDirection: 'column', gap: 16 }}
         >
           {step === 1 && (<>
