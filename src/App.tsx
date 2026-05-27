@@ -95,9 +95,9 @@ function DesktopLayout({ step, setStep, form, set, submitted, setSubmitted }: La
         padding: '32px 52px 0',
         display: 'flex', alignItems: 'center', justifyContent: 'space-between', flexShrink: 0,
       }}>
-        <img src="/logo.webp" alt="Higgsfield" style={{ height: 36, width: 'auto', display: 'block', objectFit: 'contain' }} />
+        <img src="/logo.webp" alt="Mirage Bureau" style={{ height: 36, width: 'auto', display: 'block', objectFit: 'contain' }} />
         <span style={{ fontSize: 10.5, letterSpacing: '0.24em', textTransform: 'uppercase', color: 'rgba(255,255,255,0.35)', fontWeight: 300 }}>
-          AI Creative Agency
+          Creative Agency
         </span>
       </header>
 
@@ -110,7 +110,7 @@ function DesktopLayout({ step, setStep, form, set, submitted, setSubmitted }: La
           {/* Big logo as hero visual */}
           <img
             src="/logo.webp"
-            alt="Higgsfield"
+            alt="Mirage Bureau"
             style={{
               display: 'block',
               width: 'clamp(160px, 20vw, 280px)',
@@ -171,7 +171,7 @@ function MobileLayout({ step, setStep, form, set, submitted, setSubmitted }: Lay
 
       {/* Mobile header */}
       <header style={{ padding: '28px 24px 0', display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0 }}>
-        <img src="/logo.webp" alt="Higgsfield" style={{ height: 26, objectFit: 'contain' }} />
+        <img src="/logo.webp" alt="Mirage Bureau" style={{ height: 26, objectFit: 'contain' }} />
       </header>
 
       {/* Hero text block */}
@@ -180,7 +180,7 @@ function MobileLayout({ step, setStep, form, set, submitted, setSubmitted }: Lay
         {/* Logo large — mobile hero graphic */}
         <img
           src="/logo.webp"
-          alt="Higgsfield"
+          alt="Mirage Bureau"
           style={{
             width: 180,
             objectFit: 'contain',
@@ -245,7 +245,7 @@ function FormCard({ step, setStep, form, set, submitted, setSubmitted, mobile }:
           {/* Logo in form */}
           <img
             src="/logo.webp"
-            alt="Higgsfield"
+            alt="Mirage Bureau"
             style={{ height: 20, objectFit: 'contain', display: 'block', marginBottom: 8, opacity: 0.88 }}
           />
           <h2 style={{
