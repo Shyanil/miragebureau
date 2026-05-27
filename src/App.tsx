@@ -61,16 +61,16 @@ export default function App() {
       position: 'fixed', inset: 0, background: '#000',
       fontFamily: "'Outfit', ui-sans-serif, sans-serif",
     }}>
-      {/* ══ VIDEO ══ */}
-      <video
-        style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', objectFit: 'cover', opacity: 0.72 }}
-        autoPlay loop muted playsInline
-        src="https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/hf_20260418_063509_7d167302-4fd4-480b-8260-18ab572333d4.mp4"
+      {/* ══ HERO IMAGE ══ */}
+      <img
+        src="/mirage%20v1.jpeg"
+        alt="Mirage Bureau campaign visual"
+        style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', objectFit: 'cover', objectPosition: '58% center', opacity: 0.9 }}
       />
 
       {/* ══ OVERLAYS ══ */}
-      <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(110deg, rgba(0,0,0,0.9) 0%, rgba(0,0,0,0.5) 50%, rgba(0,0,0,0.65) 100%)' }} />
-      <div style={{ position: 'absolute', bottom: 0, left: 0, right: 0, height: '40%', background: 'linear-gradient(to top, rgba(0,0,0,0.85), transparent)' }} />
+      <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(110deg, rgba(0,0,0,0.76) 0%, rgba(0,0,0,0.34) 48%, rgba(0,0,0,0.46) 100%)' }} />
+      <div style={{ position: 'absolute', bottom: 0, left: 0, right: 0, height: '40%', background: 'linear-gradient(to top, rgba(0,0,0,0.58), transparent)' }} />
 
       {isMobile
         ? <MobileLayout step={step} setStep={setStep} form={form} set={set} submitted={submitted} setSubmitted={setSubmitted} />
@@ -102,7 +102,7 @@ function DesktopLayout({ step, setStep, form, set, submitted, setSubmitted }: La
         display: 'flex', alignItems: 'center', justifyContent: 'flex-end', flexShrink: 0,
       }}>
         <span style={{ fontSize: 10.5, letterSpacing: '0.24em', textTransform: 'uppercase', color: 'rgba(255,255,255,0.28)', fontWeight: 300 }}>
-          Creative Agency
+          UGC & Video Campaign Studio
         </span>
       </header>
 
@@ -127,7 +127,7 @@ function DesktopLayout({ step, setStep, form, set, submitted, setSubmitted }: La
             alignItems: 'center',
             gap: 12
           }}>
-            <span>Creative Studio</span>
+            <span>Campaign Studio</span>
             <div style={{ width: 24, height: 1, background: 'rgba(255,255,255,0.3)' }} />
           </div>
 
@@ -150,13 +150,13 @@ function DesktopLayout({ step, setStep, form, set, submitted, setSubmitted }: La
             fontStyle: 'italic', fontWeight: 300,
             color: 'rgba(255,255,255,0.38)', lineHeight: 1.75,
           }}>
-            AI-native filmmaking, brand stories &amp; generative
-            visuals — for founders who refuse to look ordinary.
+            UGC videos, performance campaigns, brand films
+            and TV ads for brands built to be remembered.
           </p>
         </div>
 
         {/* RIGHT — form */}
-        <div style={{ width: 400, flexShrink: 0 }}>
+        <div style={{ width: 360, flexShrink: 0, marginTop: 56, transform: 'translateX(28px)' }}>
           <FormCard step={step} setStep={setStep} form={form} set={set} submitted={submitted} setSubmitted={setSubmitted} />
         </div>
       </div>
@@ -214,7 +214,7 @@ function MobileLayout({ step, setStep, form, set, submitted, setSubmitted }: Lay
           fontSize: 15, fontStyle: 'italic', fontWeight: 300,
           color: 'rgba(255,255,255,0.4)', lineHeight: 1.65,
         }}>
-          AI-native filmmaking &amp; generative visuals — for founders who refuse to look ordinary.
+          UGC videos, performance campaigns, brand films and TV ads for brands built to be remembered.
         </p>
       </div>
 
@@ -266,9 +266,9 @@ function FormCard({ step, setStep, form, set, submitted, setSubmitted, mobile }:
             fontFamily: "'Cormorant Garamond', serif",
             fontStyle: 'italic', fontSize: mobile ? 19 : 21, letterSpacing: '-0.01em',
           }}>
-            {step === 1 && 'Who are you?'}
-            {step === 2 && 'The project.'}
-            {step === 3 && 'Your vision.'}
+            {step === 1 && 'Tell us about your brand'}
+            {step === 2 && 'Define the campaign'}
+            {step === 3 && 'Share the creative brief'}
           </h2>
         </div>
 
@@ -302,18 +302,18 @@ function FormCard({ step, setStep, form, set, submitted, setSubmitted, mobile }:
           style={{ padding: mobile ? '20px 22px 24px' : '22px 28px 28px', display: 'flex', flexDirection: 'column', gap: 16 }}
         >
           {step === 1 && (<>
-            <Field label="Full name" placeholder="Alex Rivera" value={form.name} onChange={v => set('name', v)} required />
-            <Field label="Company" placeholder="Acme Studios" value={form.company} onChange={v => set('company', v)} />
-            <Field label="Email" type="email" placeholder="you@company.com" value={form.email} onChange={v => set('email', v)} required />
+            <Field label="Your name" placeholder="Alex Rivera" value={form.name} onChange={v => set('name', v)} required />
+            <Field label="Brand or company" placeholder="Acme Studios" value={form.company} onChange={v => set('company', v)} />
+            <Field label="Work email" type="email" placeholder="you@company.com" value={form.email} onChange={v => set('email', v)} required />
             <Btn onClick={() => setStep(2)} label="Continue" />
           </>)}
 
           {step === 2 && (<>
-            <Select label="Type of project" value={form.projectType} onChange={v => set('projectType', v)} required
-              options={['Brand film', 'Campaign visuals', 'Product showcase', 'Social content', 'Other']} />
-            <Select label="Budget" value={form.budget} onChange={v => set('budget', v)}
+            <Select label="Campaign type" value={form.projectType} onChange={v => set('projectType', v)} required
+              options={['UGC video package', 'Video marketing campaign', 'TV commercial', 'Brand film', 'Social ad creative', 'Other']} />
+            <Select label="Estimated production budget" value={form.budget} onChange={v => set('budget', v)}
               options={['Under $10k', '$10k – $50k', '$50k – $150k', '$150k+']} />
-            <Select label="Timeline" value={form.timeline} onChange={v => set('timeline', v)}
+            <Select label="Preferred launch timeline" value={form.timeline} onChange={v => set('timeline', v)}
               options={['ASAP', 'Within a month', 'This quarter', 'Flexible']} />
             <div style={{ display: 'flex', gap: 10 }}>
               <BackBtn onClick={() => setStep(1)} />
@@ -323,10 +323,10 @@ function FormCard({ step, setStep, form, set, submitted, setSubmitted, mobile }:
 
           {step === 3 && (<>
             <div style={{ display: 'flex', flexDirection: 'column', gap: 7 }}>
-              <label style={labelStyle}>Describe your vision</label>
+              <label style={labelStyle}>Campaign goals and creative direction</label>
               <textarea
                 rows={4} required
-                placeholder="Something cinematic, unexpected — something that stops people mid-scroll…"
+                placeholder="Tell us about the audience, product, channels, key message, and any references or deliverables you already have in mind."
                 value={form.vision}
                 onChange={e => set('vision', e.target.value)}
                 style={{ ...inputStyle, resize: 'none', fontStyle: 'italic', lineHeight: 1.6 }}
